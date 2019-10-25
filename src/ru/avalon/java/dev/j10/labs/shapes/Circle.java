@@ -15,4 +15,49 @@ public class Circle {
      * 1. Используйте наследование.
      * 2. Реализуйте все абстрактные методы.
      */
+private final float x;
+    private final float y ;
+    private final float r;
+    private final int rotation;
+    
+    
+    public Circle(){
+        x = (float) (0.5*Math.random());
+        y = (float) (0.5*Math.random());
+        r = (float) (0.5*Math.random());
+        rotation = (int) (360*Math.random());
+    }
+    
+    @Override
+    public float getX(){
+        return x;
+    }
+    
+    @Override
+    public float getY(){
+        return y;
+    }
+    
+    
+    @Override
+    public float getLength(){
+        return (float) (2*PI*r);
+    }
+    
+    
+    @Override
+    public float getArea(){
+        return (float) (PI*r*r);
+    }
+    
+    @Override
+    public int getRotation(){
+        return rotation;
+    }
+    
+    @Override
+    public String toString(){
+        return "|Circle (length " + getLength() + " m)| ";
+}
+    
 }
