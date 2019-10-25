@@ -21,4 +21,55 @@ public class Triangle {
      * 1. Используйте наследование.
      * 2. Реализуйте все абстрактные методы.
      */
+ private final float a;
+    private final float b;
+    private final float c;
+    private final float h;
+    private final float x;
+    private final float y;
+    private final int rotation;
+    
+    
+    public Triangle(){
+        a = (float) Math.random();
+        b = (float) Math.random();
+        c = (float) Math.random();
+        h = (float) Math.random();
+        x = (float) Math.random();
+        y = (float) Math.random();
+        rotation = (int) (360*Math.random());
+    }
+    
+    @Override
+    public float getX(){
+        return x;
+    }
+    
+    @Override
+    public float getY(){
+        return y;
+    }
+    
+    
+    @Override
+    public float getPerimeter(){
+        return (float) (a+b+c);
+    }
+    
+    
+    @Override
+    public float getArea(){
+        return (float) (a*h*0.5);
+    }
+    
+    @Override
+    public int getRotation(){
+        return rotation;
+    }
+    
+    @Override
+    public String toString(){
+        return "|Triangle (perimeter " + getPerimeter() + " m)| ";
+}
+    
 }
